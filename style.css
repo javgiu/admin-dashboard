@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+
+}
+
+body {
+    height: 100dvh;
+}
+
+svg {
+    fill: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1.5fr 8.5fr;
+}
+
+.item {
+    padding: 2rem;
+}
+
+.header {
+    background-color: #fff;
+    grid-column: 2;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.header svg {
+    fill: black;
+    width: 50px;
+}
+
+.sidebar {
+    min-width: max-content;
+    overflow: auto;
+    padding: 2rem;
+    background-color: #0a0c18;
+    color: white;
+    grid-row: 1 / span 2;
+
+    display: grid;
+    grid-template-columns: minmax(max-content,1fr);
+    grid-template-rows: 0.2fr repeat(2, 1fr);
+    align-items: start;
+    gap: 4rem;
+}
+
+.sidebar p {
+    font-size: 1.2rem;
+}
+
+.sidebar-title svg {
+    width: 40px;
+}
+
+.sidebar-menu svg {
+    width: 25px;
+}
+
+.sidebar-menu {
+    font-weight: 800;
+    display: grid;
+    grid-auto-rows: 1rem;
+    gap: calc(1.5rem + 2vh);
+    justify-items: start;
+}
+
+.main {
+    background-color: #eee;
+}
+
+.grid-row-group {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 10px;
+
+    align-items: center;
+    justify-items: start;
+}
